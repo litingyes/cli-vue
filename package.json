@@ -28,6 +28,7 @@
   "dependencies": {
     "@vue/runtime-core": "^3.3.4",
     "vue": "^3.3.4",
+    "vue-router": "^4.2.1",
     "vue-termui": "^0.0.19"
   },
   "devDependencies": {
