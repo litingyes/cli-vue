@@ -1,10 +1,18 @@
 {
-  "name": "liting-cli",
-  "private": true,
+  "name": "@liting-yes/cli",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "description": "Integration of some development shortcuts",
+  "author": "liting-yes <luz.liting@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dev-standard/liting-cli#readme",
+  "keywords": [
+    "cli",
+    "liting"
+  ],
   "bin": {
-    "vtui-app": "./dist/main.mjs"
+    "liting": "./dist/main.mjs"
   },
   "scripts": {
     "dev": "vtui dev",
