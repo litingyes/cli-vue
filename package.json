@@ -11,6 +11,9 @@
     "cli",
     "liting"
   ],
+  "files": [
+    "dist"
+  ],
   "bin": {
     "liting": "./dist/main.mjs"
   },
