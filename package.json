@@ -1,8 +1,8 @@
 {
   "name": "@liting-yes/cli",
-  "private": false,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": false,
   "description": "Integration of some development shortcuts",
   "author": "liting-yes <luz.liting@gmail.com>",
   "license": "MIT",
@@ -11,19 +11,24 @@
     "cli",
     "liting"
   ],
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "bin": {
     "liting": "./dist/main.mjs"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vtui dev",
     "build": "vtui build",
     "lint": "eslint .",
     "format": "eslint --fix .",
     "commit": "git-cz",
-    "prepare": "npx simple-git-hooks"
+    "prepare": "npx simple-git-hooks",
+    "release": "release-it"
   },
   "dependencies": {
     "@vue/runtime-core": "^3.3.4",
@@ -36,6 +41,7 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@commitlint/cz-commitlint": "^17.5.0",
+    "@release-it/conventional-changelog": "^5.1.1",
     "@types/node": "^20.2.1",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue-termui/cli": "^0.0.17",
@@ -44,6 +50,7 @@
     "eslint": "^8.40.0",
     "inquirer": "8",
     "lint-staged": "^13.2.2",
+    "release-it": "^15.10.3",
     "simple-git-hooks": "^2.8.1",
     "typescript": "^5.0.4",
     "unplugin-auto-import": "^0.11.5",
