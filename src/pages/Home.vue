@@ -4,6 +4,7 @@ import { TuiNewline } from 'vue-termui'
 
 <template>
   <div
+    title="liting-yes"
     :width="80"
     :height="10"
     border-style="round"
