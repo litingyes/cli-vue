@@ -9,7 +9,7 @@ onKeyData(['Backspace', 'Delete'], () => {
 
 const navMap = [
     {
-        label: 'version',
+        label: 'Version',
         path: '/version',
     },
 ]
