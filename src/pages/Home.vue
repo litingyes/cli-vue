@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { TuiNewline } from 'vue-termui'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+onKeyData(['Enter'], () => {
+  router.push('/nav')
+})
 </script>
 
 <template>
