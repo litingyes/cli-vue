@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { TuiNewline } from 'vue-termui'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -21,10 +20,6 @@ onKeyData(['Enter'], () => {
   >
     <Text color="#ea580c" bold>
       Welcome to Liting Cli 🎉
-    </Text>
-    <TuiNewline :n="1" />
-    <Text>
-      [Enter] to start
     </Text>
   </div>
 </template>

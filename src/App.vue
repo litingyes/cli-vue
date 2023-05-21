@@ -1,5 +1,20 @@
 <script lang="ts" setup>
 import { TuiLink, isKeyDataEvent } from 'vue-termui'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const routeName = computed(() => route.name as string)
+
+const tip = computed(() => {
+  if (routeName.value === 'Home')
+    return '[Enter] Start'
+  else if (routeName.value === 'Nav')
+    return '[Enter] Select | [←] Back'
+  else if (routeName.value === 'Version')
+    return '[←] Back'
+  else
+    return ''
+})
 
 const stop = onInputData(({ event }) => {
   if (isKeyDataEvent(event)) {
@@ -15,7 +30,10 @@ const stop = onInputData(({ event }) => {
   <Box>
     <RouterView />
   </Box>
-  <Box :width="80" class="justify-end">
+  <Box :width="80" class="flex justify-between">
+    <Text dimmed>
+      {{ tip }}
+    </Text>
     <TuiLink
       href="https://github.com/liting-yes/cli.git" :fallback="false"
       :inverse="false"
