@@ -6,10 +6,12 @@
   "description": "Integration of some development shortcuts",
   "author": "liting-yes <luz.liting@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/dev-standard/liting-cli#readme",
+  "homepage": "https://github.com/liting-yes/cli#readme",
   "keywords": [
     "cli",
-    "liting"
+    "liting",
+    "vue",
+    "terminal"
   ],
   "publishConfig": {
     "access": "public",
