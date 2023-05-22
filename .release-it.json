@@ -52,7 +52,7 @@
         }
     },
     "hooks": {
-        "after:bump": "npx build",
+        "after:bump": "npx vtui build",
         "after:git:release": "git push origin HEAD"
     }
 }
