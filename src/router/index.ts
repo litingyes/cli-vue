@@ -1,8 +1,8 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
-import Home from '@/pages/Home.vue'
-import Nav from '@/pages/Nav.vue'
-import Version from '@/pages/Version.vue'
-import Eslint from '@/pages/Eslint.vue'
+import Home from '@/components/Home.vue'
+import Nav from '@/components/Nav.vue'
+import Version from '@/components/Version.vue'
+import Eslint from '@/components/Eslint.vue'
 
 export const router = createRouter({
   history: createMemoryHistory(),
