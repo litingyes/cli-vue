@@ -11,7 +11,6 @@ declare module '@vue/runtime-core' {
     Div: typeof import('vue-termui')['TuiBox']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Span: typeof import('vue-termui')['TuiText']
     Text: typeof import('vue-termui')['TuiText']
   }
 }

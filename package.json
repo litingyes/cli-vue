@@ -1,7 +1,7 @@
 {
   "name": "@liting-yes/cli",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
   "description": "Integration of some development shortcuts",
   "author": "liting-yes <luz.liting@gmail.com>",
