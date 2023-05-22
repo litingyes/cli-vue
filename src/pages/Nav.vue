@@ -7,19 +7,23 @@ onKeyData(['Backspace', 'Delete'], () => {
   router.push('/')
 })
 
-const navMap = [
-    {
-        label: 'Version',
-        path: '/version',
-    },
+const navMap: Array<{ label: string; path: `/${string}` }> = [
+  {
+    label: 'Version',
+    path: '/version',
+  },
+  {
+    label: 'Eslint',
+    path: '/eslint',
+  },
 ]
 const total = navMap.length
 const selectedNav = ref(0)
 onKeyData(['ArrowLeft'], () => {
-    selectedNav.value = (selectedNav.value - 1 + total) % total
+  selectedNav.value = (selectedNav.value - 1 + total) % total
 })
 onKeyData(['ArrowRight', 'Tab'], () => {
-    selectedNav.value = (selectedNav.value + 1) % total
+  selectedNav.value = (selectedNav.value + 1) % total
 })
 onKeyData(['Enter'], () => {
   router.push(navMap[selectedNav.value].path)
@@ -27,8 +31,8 @@ onKeyData(['Enter'], () => {
 </script>
 
 <template>
-  <Box title="Nav" :width="80" :height="10" border-style="round" class="flex-col p-2">
-    <Box v-for="(item, i) in navMap" :key="item.label" :width="15" :height="3" :border-color="i === selectedNav ? 'yellow' : 'white'">
+  <Box title="Nav" :width="80" :height="10" border-style="round" class="flex p-2">
+    <Box v-for="(item, i) in navMap" :key="item.label" :width="10" :height="3" :border-color="i === selectedNav ? 'yellow' : 'white'">
       <Text :color="i === selectedNav ? 'yellow' : 'white'">
         {{ item.label }}
       </Text>

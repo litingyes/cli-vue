@@ -10,7 +10,7 @@ const tip = computed(() => {
     return '[Enter] Start'
   else if (routeName.value === 'Nav')
     return '[Enter] Select | [←] Back'
-  else if (routeName.value === 'Version')
+  else if (['Version', 'Eslint'].includes(routeName.value))
     return '[←] Back'
   else
     return ''

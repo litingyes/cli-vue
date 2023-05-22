@@ -1,6 +1,3 @@
 {
-    "extends": "@antfu",
-    "rules": {
-        "@typescript-eslint/indent": 0
-    }
+  "extends": "@antfu"
 }
