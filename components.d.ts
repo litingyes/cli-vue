@@ -9,8 +9,12 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Box: typeof import('vue-termui')['TuiBox']
     Div: typeof import('vue-termui')['TuiBox']
+    Eslint: typeof import('./src/components/Eslint.vue')['default']
+    Home: typeof import('./src/components/Home.vue')['default']
+    Nav: typeof import('./src/components/Nav.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Text: typeof import('vue-termui')['TuiText']
+    Version: typeof import('./src/components/Version.vue')['default']
   }
 }

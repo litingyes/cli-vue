@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { execSync } from 'node:child_process'
 import { useRouter } from 'vue-router'
-import { execaSync } from 'execa'
-import { outputFileSync } from 'fs-extra'
 
 const router = useRouter()
 onKeyData(['Backspace', 'Delete'], () => {
@@ -57,11 +56,11 @@ function start() {
     runInfo.value[1].status = 'progressing'
     runInfo.value[1].color = 'yellow'
     if (runInfo.value[0].value === 'pnpm')
-      execaSync('pnpm', ['add', 'eslint', '@antfu/eslint-config', '-D'])
+      execSync('pnpm add eslint @antfu/eslint-config -D', { encoding: 'utf8' })
     else if (runInfo.value[0].value === 'yarn')
-      execaSync('yarn', ['add', 'eslint', '@antfu/eslint-config', '-D'])
+      execSync('yarn add eslint @antfu/eslint-config -D', { encoding: 'utf8' })
     else
-      execaSync('npm', ['i', 'eslint', '@antfu/eslint-config', '-D'])
+      execSync('npm i eslint @antfu/eslint-config -D', { encoding: 'utf8' })
     runInfo.value[1].status = 'success'
     runInfo.value[1].color = 'greenBright'
   }
@@ -74,9 +73,9 @@ function start() {
     runInfo.value[2].status = 'progressing'
     runInfo.value[2].color = 'yellow'
     const eslintrcPath = resolve(root, '.eslintrc')
-    outputFileSync(eslintrcPath, JSON.stringify({ extends: '@antfu' }, null, 2))
+    writeFileSync(eslintrcPath, JSON.stringify({ extends: '@antfu' }, null, 2))
     const eslintIgnoreData = readFileSync(resolve(root, '.gitignore'), 'utf-8')
-    outputFileSync(resolve(root, '.eslintignore'), eslintIgnoreData)
+    writeFileSync(resolve(root, '.eslintignore'), eslintIgnoreData)
     runInfo.value[2].status = 'success'
     runInfo.value[2].color = 'greenBright'
   }
