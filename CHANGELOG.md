@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/liting-yes/cli/compare/0.1.0...0.1.1) (2023-05-26)
+
+
+### Bug Fixes
+
+* **version:** run error after build ([553da53](https://github.com/liting-yes/cli/commit/553da53a91596b7adcb89c0c59f4cc00b2e5fe4f))
+
 ## 0.1.0 (2023-05-22)
 
 
