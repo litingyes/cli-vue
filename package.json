@@ -43,7 +43,7 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@commitlint/cz-commitlint": "^17.5.0",
-    "@release-it/conventional-changelog": "^5.1.1",
+    "@release-it/conventional-changelog": "^6.0.0",
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.2.1",
     "@vitejs/plugin-vue": "^3.2.0",
