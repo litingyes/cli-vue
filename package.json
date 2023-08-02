@@ -39,7 +39,7 @@
     "vue-termui": "^0.0.19"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.0",
+    "@antfu/eslint-config": "^0.40.0",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@commitlint/cz-commitlint": "^17.5.0",
